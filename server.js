@@ -11,6 +11,7 @@ import checkoutRoutes from './routes/checkout.js';
 import adminRoutes from './routes/admin.js';
 import promoRoutes from './routes/promo.js';
 import miscRoutes from './routes/misc.js';
+import contactRoutes from './routes/contact.js';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -50,6 +51,7 @@ app.use('/api', checkoutRoutes);
 app.use('/api', adminRoutes);
 app.use('/api', promoRoutes);
 app.use('/api', miscRoutes);
+ app.use('/api', contactRoutes);
 
 // ── Error handler — catches CORS rejections and anything else that falls
 //    through, so callers always get clean JSON instead of an HTML stack
